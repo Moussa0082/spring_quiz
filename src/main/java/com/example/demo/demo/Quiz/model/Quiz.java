@@ -2,6 +2,7 @@ package com.example.demo.demo.Quiz.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -32,6 +33,7 @@ public class Quiz {
     @ManyToOne
     private Inscription inscription;
 
+    @JsonIgnoreProperties("quiz")
     @OneToMany
     List<Question> question;
    

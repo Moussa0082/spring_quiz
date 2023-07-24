@@ -1,5 +1,7 @@
 package com.example.demo.demo.Quiz.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,6 +29,7 @@ public class Reponse {
     @ManyToOne
     private Inscription inscription;
 
+    @JsonIgnoreProperties("reponse")
     @OneToOne(mappedBy = "reponse")
     private Quiz quiz;
 

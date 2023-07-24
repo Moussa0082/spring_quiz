@@ -2,6 +2,8 @@ package com.example.demo.demo.Quiz.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,9 +30,11 @@ public class Classement {
     @Column(nullable = false)
     private int number;
 
+    @JsonIgnoreProperties("classement")
     @OneToMany(mappedBy = "classement")
     List<Reponse> reponse;
 
+    @JsonIgnoreProperties("classement")
     @OneToMany(mappedBy = "classement")
     List<Inscription> inscription;
 }
