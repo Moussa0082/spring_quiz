@@ -1,10 +1,14 @@
 package com.example.demo.demo.Quiz.model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 
@@ -24,6 +28,19 @@ public class Inscription {
 	
 	@Column(length = 150)
 	private String password;
+	
+	 @OneToMany(mappedBy = "inscription")
+    private List<Quiz> quiz;
+
+	 @OneToMany(mappedBy = "inscription")
+    private List<Reponse> reponse;
+
+	@ManyToOne
+	private Classement classement;
+
+
+
+
 //constructor
 	
 	

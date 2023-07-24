@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -37,6 +38,11 @@ public class Question {
     private String reponse;
 
     @Column(length = 50, nullable = false)
-    private String category;    
+    private String category; 
+
+     @ManyToOne
+    private Quiz quiz;
+    
+    
 
 }
