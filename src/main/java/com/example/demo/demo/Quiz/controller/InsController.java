@@ -15,7 +15,7 @@ import com.example.demo.demo.Quiz.service.InscriptionService;
 
 
 @RestController
-@RequestMapping("/Inscription")
+@RequestMapping("/inscription")
 public class InsController {
 
 	@Autowired
