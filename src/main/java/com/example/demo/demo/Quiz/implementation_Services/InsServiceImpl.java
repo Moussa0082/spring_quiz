@@ -1,10 +1,11 @@
-package com.example.demo.demo.Quiz.service;
+package com.example.demo.demo.Quiz.implementation_Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.demo.Quiz.model.Inscription;
 import com.example.demo.demo.Quiz.repository.InsRepository;
+import com.example.demo.demo.Quiz.service.InscriptionService;
 
 import lombok.AllArgsConstructor;
 
