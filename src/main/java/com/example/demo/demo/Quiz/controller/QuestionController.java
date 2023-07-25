@@ -42,7 +42,7 @@ public class QuestionController {
     }
 
     //Recuperer tous  les questions
-    @GetMapping("/allQuestions")
+    @GetMapping("/all")
     public List<Question> getAllQuestions(){
         return questionRepository.findAll();
     }

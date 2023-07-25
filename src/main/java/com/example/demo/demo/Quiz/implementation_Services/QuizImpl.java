@@ -1,5 +1,7 @@
 package com.example.demo.demo.Quiz.implementation_Services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +33,10 @@ private QuizRepository quizRepository;
     public String supprimer(int id_Qz) {
        quizRepository.deleteById(id_Qz);
        return "Quiz supprimer avec succès";
+    }
+
+    public List<Quiz> getAllQuiz(){
+      return quizRepository.findAll();
     }
     
 }
