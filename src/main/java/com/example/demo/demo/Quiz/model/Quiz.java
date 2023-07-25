@@ -41,10 +41,6 @@ public class Quiz {
     @jakarta.persistence.OneToOne
     private Reponse reponse;
 
-    // @OneToMany(mappedBy = "quiz")
-    // private List<Resultat> resultats;
 
-    // @OneToMany(mappedBy  = "id_Qs", cascade = CascadeType.ALL)
-    // private List<Question> questions;
     
 }
