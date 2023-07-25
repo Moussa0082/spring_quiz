@@ -39,6 +39,7 @@ public class Inscription {
 	@OneToMany(mappedBy = "inscription")
     private List<Reponse> reponse;
 
+	@JsonIgnoreProperties("inscription")
 	@ManyToOne
 	private Classement classement;
 

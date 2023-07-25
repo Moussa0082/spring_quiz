@@ -33,7 +33,7 @@ public class InsController {
     public InsController(InscriptionService insService) {
         this.insService = insService;
     }*/
-    @Autowired
+    // @Autowired
     public InsController(InsServiceImpl insServiceImpl) {
         this.insServiceImpl = insServiceImpl;
     }
